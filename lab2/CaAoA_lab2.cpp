@@ -8,7 +8,7 @@ int main()
 	//std::cin >> first_vertex;
 	try
 	{
-		Graph spanning_tree = find_spanning_tree(input_graph, first_vertex);
+		Graph spanning_tree = findSpanningTree(input_graph, first_vertex);
 		std::cout << std::endl << "Spanning tree:" << std::endl;
 		print(spanning_tree);
 	}

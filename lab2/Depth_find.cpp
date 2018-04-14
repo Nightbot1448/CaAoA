@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Depth_find.h"
 
-void inverse_set(const std::set<char> &list, char prev_vertex, 
+void inverseSet(const std::set<char> &list, char prev_vertex,
 				 std::stack<std::pair<char,char> > &st, const std::set<char> &used_vertex);
 
 Graph read()
@@ -10,7 +10,6 @@ Graph read()
 	Graph input_graph;
 	std::set<char> used_vertex;
 	char vertex, incid_vertex; //vertexs
-	double weight;
 
 	while (fin >> vertex)
 	{
@@ -52,7 +51,7 @@ Graph read()
 	return input_graph;
 }
 
-Graph find_spanning_tree(const Graph &input_graph, char first_vertex)
+Graph findSpanningTree(const Graph &input_graph, char first_vertex)
 {
 	std::stack<std::pair<char, char> > st;
 	auto it = input_graph.begin();
@@ -110,7 +109,7 @@ Graph find_spanning_tree(const Graph &input_graph, char first_vertex)
 	return spannig_tree;
 }
 
-void inverse_set(const std::set<char> &list, char prev_vertex, 
+void inverseSet(const std::set<char> &list, char prev_vertex,
 				 std::stack<std::pair<char, char> > &st, const std::set<char> &used_vertex)
 {
 	auto el_of_set = list.end();
